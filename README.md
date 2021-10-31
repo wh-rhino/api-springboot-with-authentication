@@ -1,6 +1,6 @@
 # Demo
 
-API RESTful de creación de usuarios.
+RESTful API for user creation.
 
 # Libraries
 
@@ -38,7 +38,7 @@ curl --location --request POST 'http://localhost:8080/users/register-user' \
     "identificador": "4b0cd328-e691-4b26-9f9f-4363241b02ee"
 }
 ````
-#### (2) Login usuario request
+#### (2) Login user request
 ````
 curl --location --request POST 'http://localhost:8080/users/login' \
 --header 'Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJKdWFuIFJvZHJpZ3VleiBPdHJvIDI2IiwiaXNzIjoiYXV0aDAiLCJleHAiOjE2MjMwNTQ4NTYsImlhdCI6MTYyMzA1NDY1NiwiYXV0aG9yaXRpZXMiOlsiUk9MRV9VU0VSIiwiUk9MRV9BRE1JTiJdfQ.XIX3otMb4gBu_jJyDcwgQlB430amJ8jdHLXKWEe7WyI' \
@@ -46,7 +46,7 @@ curl --location --request POST 'http://localhost:8080/users/login' \
 --data-urlencode 'username=Juan Rodriguez Otro 26' \
 --data-urlencode 'password=Aythi34'
 ````
-#### Login usuario response
+#### Login user response
 ````
 {
     "id": "44ae6189-2e28-4296-b66c-f40ab4d2a452",
