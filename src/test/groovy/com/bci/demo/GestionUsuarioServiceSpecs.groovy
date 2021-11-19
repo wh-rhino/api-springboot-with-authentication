@@ -2,11 +2,10 @@ package com.bci.demo
 
 import com.bci.demo.component.GestionUsuarioComponent
 import com.bci.demo.component.GestionUsuarioComponentImpl
-import com.bci.demo.dto.DatosUsuarioDTO
 import com.bci.demo.model.UsuarioModel
 import com.bci.demo.security.JwtConfig
+
 import com.bci.demo.service.GestionUsuarioService
-import com.bci.demo.service.GestionUsuarioServiceImpl
 import com.bci.demo.util.Utils
 import spock.lang.Specification
 import spock.lang.Unroll
@@ -26,7 +25,7 @@ class GestionUsuarioServiceSpecs extends Specification {
         jwtConfig = Mock(JwtConfig)
         httpServletRequest = Stub()
         usuarioModel = Mock()
-        gestionUsuarioService = new GestionUsuarioServiceImpl(gestionUsuarioComponent, jwtConfig, httpServletRequest)
+        gestionUsuarioService = new GestionUsuarioService(gestionUsuarioComponent, jwtConfig, httpServletRequest)
     }
 
     @Unroll

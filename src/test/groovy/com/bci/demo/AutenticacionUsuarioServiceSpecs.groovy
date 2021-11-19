@@ -4,8 +4,8 @@ import com.bci.demo.component.AutenticacionUsuarioComponent
 import com.bci.demo.component.AutenticacionUsuarioComponentImpl
 import com.bci.demo.constant.Constant
 import com.bci.demo.dto.AutenticacionUsuarioDTO
+
 import com.bci.demo.service.AutenticacionUsuarioService
-import com.bci.demo.service.AutenticacionUsuarioServiceImpl
 import spock.lang.Specification
 import spock.lang.Unroll
 import javax.servlet.http.HttpServletRequest
@@ -20,7 +20,7 @@ class AutenticacionUsuarioServiceSpecs extends Specification {
     def setup(){
         autenticacionUsuarioComponent = Mock(AutenticacionUsuarioComponentImpl)
         httpServletRequest = Stub()
-        autenticacionUsuarioService = new AutenticacionUsuarioServiceImpl(httpServletRequest, autenticacionUsuarioComponent)
+        autenticacionUsuarioService = new AutenticacionUsuarioService(httpServletRequest, autenticacionUsuarioComponent)
     }
 
     @Unroll
