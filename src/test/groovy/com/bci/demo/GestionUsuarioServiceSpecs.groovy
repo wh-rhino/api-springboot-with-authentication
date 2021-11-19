@@ -1,7 +1,7 @@
 package com.bci.demo
 
+
 import com.bci.demo.component.GestionUsuarioComponent
-import com.bci.demo.component.GestionUsuarioComponentImpl
 import com.bci.demo.model.UsuarioModel
 import com.bci.demo.security.JwtConfig
 
@@ -21,7 +21,7 @@ class GestionUsuarioServiceSpecs extends Specification {
     private UsuarioModel usuarioModel
 
     def setup(){
-        gestionUsuarioComponent = Mock(GestionUsuarioComponentImpl)
+        gestionUsuarioComponent = Mock(GestionUsuarioComponent)
         jwtConfig = Mock(JwtConfig)
         httpServletRequest = Stub()
         usuarioModel = Mock()

@@ -1,14 +1,27 @@
 package com.bci.demo.component;
 
 import com.bci.demo.model.UsuarioModel;
+import com.bci.demo.repository.GestionUsuarioRepository;
+import lombok.RequiredArgsConstructor;
+import org.springframework.stereotype.Component;
 import java.util.List;
 import java.util.Optional;
 
-public interface GestionUsuarioComponent {
-    UsuarioModel registrarUsuario(UsuarioModel usuarioModel);
+@Component
+@RequiredArgsConstructor
+public class GestionUsuarioComponent {
 
-    List<UsuarioModel> obtenerUsuarios();
+    private final GestionUsuarioRepository gestionUsuarioRepository;
 
-    Optional<UsuarioModel> obtenerUsuario(String username);
+    public UsuarioModel registrarUsuario(UsuarioModel usuarioModel){
+        return gestionUsuarioRepository.saveAndFlush(usuarioModel);
+    }
+
+    public List<UsuarioModel> obtenerUsuarios(){
+        return gestionUsuarioRepository.findAll();
+    }
+
+    public Optional<UsuarioModel> obtenerUsuario(String username){
+        return gestionUsuarioRepository.findByUsername(username);
+    }
 }
-

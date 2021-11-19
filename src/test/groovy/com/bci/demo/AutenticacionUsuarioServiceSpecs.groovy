@@ -1,7 +1,7 @@
 package com.bci.demo
 
+
 import com.bci.demo.component.AutenticacionUsuarioComponent
-import com.bci.demo.component.AutenticacionUsuarioComponentImpl
 import com.bci.demo.constant.Constant
 import com.bci.demo.dto.AutenticacionUsuarioDTO
 
@@ -18,7 +18,7 @@ class AutenticacionUsuarioServiceSpecs extends Specification {
     private HttpServletRequest httpServletRequest
 
     def setup(){
-        autenticacionUsuarioComponent = Mock(AutenticacionUsuarioComponentImpl)
+        autenticacionUsuarioComponent = Mock(AutenticacionUsuarioComponent)
         httpServletRequest = Stub()
         autenticacionUsuarioService = new AutenticacionUsuarioService(httpServletRequest, autenticacionUsuarioComponent)
     }
